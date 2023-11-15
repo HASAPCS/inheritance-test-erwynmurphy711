@@ -21,14 +21,6 @@ public class Smartphone extends ElectronicDevice {
         this.batteryLevel = batteryLevel;
     }
 
-    public void testBatteryCheck(String brand, String model, int batteryLevel) {
-        if (batteryLevel >= 20) {
-            System.out.println("Warning: Battery low!");
-        } else if (batteryLevel > 20) {
-            System.out.println("Battery level is okay: " + batteryLevel + "%");
-        }
-    }
-
     public String checkBattery() {
         if (this.batteryLevel <= 20) {
             return "Warning: Battery low!";
@@ -39,7 +31,7 @@ public class Smartphone extends ElectronicDevice {
         return null;
     }
     public String getSmartphoneDetails(){
-        return "Brand: " + getBrand() + ", " + "Model: " + getModel() + ", " + "Battery Level: " + getBatteryLevel() + "%";
+        return getDeviceInfo()+ ", " + "Battery Level: " + getBatteryLevel() + "%";
     }
     // TODO: Implement a method to check the battery level and return a message
     // based on the level
